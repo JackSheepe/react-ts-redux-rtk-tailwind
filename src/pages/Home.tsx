@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useSearchUsersQuery } from "../store/github/github.api";
+import {
+  useLazyGetUserReposQuery,
+  useSearchUsersQuery,
+} from "../store/github/github.api";
 import { useDebounce } from "../hooks/debounce";
+import RepoCard from "../components/RepoCard";
 
 function Home() {
   const [search, setSearch] = useState("");
   const debounced = useDebounce(search);
   const [dropdown, setDropdown] = useState(false);
+  const [fetchRepos, { isLoading: areReposLOading, data: repos }] =
+    useLazyGetUserReposQuery();
 
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
     skip: debounced.length < 3,
+    refetchOnFocus: true,
   });
 
   useEffect(() => {
@@ -17,6 +24,11 @@ function Home() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
+  };
+
+  const userClickHandler = (username: string) => {
+    fetchRepos(username);
+    setDropdown(false);
   };
 
   return (
@@ -43,12 +55,21 @@ function Home() {
               <li
                 className="py-2 px-4 hover:bg-gray-500 hover:text-white transition-colors cursor-pointer"
                 key={user.id}
+                onClick={() => userClickHandler(user.login)}
               >
                 {user.login}
               </li>
             ))}
           </ul>
         )}
+        <div className="container">
+          {areReposLOading && (
+            <p className="text-center">Загрузка репозиториев...</p>
+          )}
+          {repos?.map((repo) => (
+            <RepoCard repo={repo} key={repo.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
