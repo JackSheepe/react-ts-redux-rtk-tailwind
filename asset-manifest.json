@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-ts-redux-rtk-tailwind/static/css/main.0249e143.css",
+    "main.js": "/react-ts-redux-rtk-tailwind/static/js/main.b1f05b61.js",
+    "index.html": "/react-ts-redux-rtk-tailwind/index.html",
+    "main.0249e143.css.map": "/react-ts-redux-rtk-tailwind/static/css/main.0249e143.css.map",
+    "main.b1f05b61.js.map": "/react-ts-redux-rtk-tailwind/static/js/main.b1f05b61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0249e143.css",
+    "static/js/main.b1f05b61.js"
+  ]
+}
