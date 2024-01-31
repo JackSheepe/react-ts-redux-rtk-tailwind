@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-ts-redux-rtk-tailwind/static/css/main.0249e143.css",
-    "main.js": "/react-ts-redux-rtk-tailwind/static/js/main.f0e7126a.js",
+    "main.css": "/react-ts-redux-rtk-tailwind/static/css/main.29f7d782.css",
+    "main.js": "/react-ts-redux-rtk-tailwind/static/js/main.15449dd2.js",
     "index.html": "/react-ts-redux-rtk-tailwind/index.html",
-    "main.0249e143.css.map": "/react-ts-redux-rtk-tailwind/static/css/main.0249e143.css.map",
-    "main.f0e7126a.js.map": "/react-ts-redux-rtk-tailwind/static/js/main.f0e7126a.js.map"
+    "main.29f7d782.css.map": "/react-ts-redux-rtk-tailwind/static/css/main.29f7d782.css.map",
+    "main.15449dd2.js.map": "/react-ts-redux-rtk-tailwind/static/js/main.15449dd2.js.map"
   },
   "entrypoints": [
-    "static/css/main.0249e143.css",
-    "static/js/main.f0e7126a.js"
+    "static/css/main.29f7d782.css",
+    "static/js/main.15449dd2.js"
   ]
 }
