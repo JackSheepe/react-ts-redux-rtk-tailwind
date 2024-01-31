@@ -7,19 +7,19 @@ function RepoCard({ repo }: { repo: InfRepo }) {
   const { addFavourite, removeFavourite } = useActions();
   const { favourites } = useAppSelector((state) => state.github);
 
-  const [isFav, setIsFav] = useState(favourites.includes(repo.html_url));
+  const [isFav, setIsFav] = useState(favourites.includes(repo));
 
   const addToFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
-    addFavourite(repo.html_url);
+    addFavourite(repo);
     setIsFav(true);
   };
 
   const removeFromFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
-    removeFavourite(repo.html_url);
+    removeFavourite(repo);
     setIsFav(false);
   };
 

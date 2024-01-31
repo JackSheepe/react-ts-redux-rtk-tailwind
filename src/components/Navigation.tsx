@@ -7,10 +7,10 @@ function Navigation() {
       <h3 className="font-bold">Github Поиск</h3>
 
       <span>
-        <Link to="/" className="mr-2">
+        <Link to="/react-ts-redux-rtk-tailwind/" className="mr-2">
           Главная
         </Link>
-        <Link to="/fav">Избранное</Link>
+        <Link to="/react-ts-redux-rtk-tailwind/fav">Избранное</Link>
       </span>
     </nav>
   );

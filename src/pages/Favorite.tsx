@@ -1,8 +1,10 @@
 import React from "react";
 import { useAppSelector } from "../hooks/redux";
+import RepoCard from "../components/RepoCard";
 
 function Favorite() {
   const { favourites } = useAppSelector((state) => state.github);
+  console.log(favourites);
 
   if (favourites.length === 0)
     return (
@@ -15,11 +17,7 @@ function Favorite() {
     <div className="flex justify-center pt-10 mx-auto h-screen w-screen">
       <ul className="list-none mt-10">
         {favourites.map((f) => (
-          <li key={f}>
-            <a href={f} target="_blank">
-              {f}
-            </a>
-          </li>
+          <RepoCard repo={f} key={f.id} />
         ))}
       </ul>
     </div>

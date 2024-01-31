@@ -9,8 +9,8 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="fav" element={<Favorite />} />
+        <Route path="react-ts-redux-rtk-tailwind/" element={<Home />} />
+        <Route path="react-ts-redux-rtk-tailwind/fav" element={<Favorite />} />
       </Routes>
     </>
   );
